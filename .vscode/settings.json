@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "FCFS.C": "cpp"
+        "FCFS.C": "cpp",
+        "SSTF.C": "cpp",
+        "SCAN.C": "cpp"
     }
 }

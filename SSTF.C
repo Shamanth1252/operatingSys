@@ -13,7 +13,6 @@ int main()
     for(i=0;i<n;i++)
     {
         scanf("%d",&req[i]);
-    }
     mov=mov+abs(cp-req[0]);
     printf("%d->%d",cp,req[0]);
     for(i=1;i<n;i++)
@@ -26,7 +25,7 @@ printf("\n");
 printf("total head movement =%d\n",mov);
 
 }
-
+/*
 enter the current position
 45
 enter the number of requests
@@ -38,4 +37,4 @@ enetr the request order
 75
 50
 45->30->66->24->75->50
-total head movement =169
+total head movement =169*/

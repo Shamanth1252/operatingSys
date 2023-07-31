@@ -48,10 +48,11 @@ int main()
            totalheadmovement=totalheadmovement+abs(rq[i]-initial);
            initial=rq[i];
        }
-
        totalheadmovement=totalheadmovement+abs(size-rq[i-1]-1);
-       initial=size-1;
-       for ( i = index-1; i >=0; i--)
+
+       totalheadmovement=totalheadmovement+abs(size-1);
+       initial=0;
+       for ( i = 0; i<index; i++)
        {
         printf("%d ",rq[i]);
         totalheadmovement=totalheadmovement+abs(rq[i]-initial);
@@ -70,9 +71,10 @@ int main()
         totalheadmovement=totalheadmovement+abs(rq[i]-initial);
         initial=rq[i];
        }
-       totalheadmovement=totalheadmovement+abs(size-rq[i-1]-1);
-       initial=0;
-         for ( i = index; i >=0; i--)
+       totalheadmovement=totalheadmovement+abs(rq[i+1]-0);
+        totalheadmovement=totalheadmovement+abs(size-1-0);
+       initial=size-1;
+         for ( i = n-1; i >=index; i--)
        {
         printf("%d ",rq[i]);
         totalheadmovement=totalheadmovement+abs(rq[i]-initial);
@@ -81,21 +83,20 @@ int main()
     }
     printf("\nTotal head movement is %d\n",totalheadmovement);
     return 0;
-   
-    
 }
-
 /*
+
 Enter the no of requests:
-7
+8
 Enter the request sequence
-82
-170
-43
-140
-24
-16
-190
+176
+79
+34
+60
+92
+11
+41
+114
 Enter the initial head position
 50
 Enter the total disk size
@@ -103,5 +104,6 @@ Enter the total disk size
 Enter the head movement direction for high 1 and for low 0
 1
 Sequence of request access:
-82 140 170 190 43 24 16 
-Total head movement is 332*/
+60 79 92 114 176 11 34 41 
+Total head movement is 389
+*/
